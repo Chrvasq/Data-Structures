@@ -27,10 +27,10 @@ class Stack:
     def push(self, value):
         self.storage.append(value)
 
-    def pop(self):
+    def pop(self, i=0):
         if len(self.storage) == 0:
             return None
-        return self.storage.pop()
+        return self.storage.pop(i)
 
 
 # class Stack: #  using linked-list class
