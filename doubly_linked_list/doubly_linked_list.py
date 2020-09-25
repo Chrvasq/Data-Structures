@@ -165,3 +165,17 @@ class DoublyLinkedList:
             current = current.next
 
         return max_value
+
+    def update_node_value(self, key, value):
+        current_node = self.find_node_by_key(key)
+        current_node.value[key] = value
+
+    def find_node_by_key(self, key):
+        current_node = self.head
+        current_node_key = list(current_node.value.keys())[0]
+
+        while current_node_key is not key:
+            current_node = current_node.next
+            current_node_key = list(current_node.value.keys())[0]
+
+        return current_node
